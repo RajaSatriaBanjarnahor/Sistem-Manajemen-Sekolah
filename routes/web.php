@@ -23,3 +23,15 @@ Auth::routes(['verify' => false, 'reset' => false]);
 Route::middleware('auth')->group(function() {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 });
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('admin.dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+});
+
+Route::group(['middleware' => 'guru'], function () {
+    Route::get('guru.dashboard', 'GuruController@dashboard')->name('guru.dashboard');
+});
+
+Route::group(['middleware' => 'siswa'], function () {
+    Route::get('siswa.dashboard', 'SiswaController@dashboard')->name('siswa.dashboard');
+});

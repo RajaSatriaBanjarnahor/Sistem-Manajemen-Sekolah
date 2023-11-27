@@ -35,6 +35,15 @@
             </span>
             @enderror
 
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" class="form-control" required>
+                    <option value="siswa">Siswa</option>
+                    <option value="guru">Guru</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
             <div class="input-group mb-3">
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
                     placeholder="Password" name="password" required autocomplete="new-password">
