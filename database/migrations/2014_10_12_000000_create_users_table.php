@@ -13,13 +13,16 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('tbl_users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 255);
             $table->string('email', 191)->unique();
             $table->enum('role', ['admin', 'guru', 'siswa'])->default('siswa');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('StudentID')->nullable();
+            $table->integer('TeacherID')->nullable();
+            $table->integer('AdminID')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -32,6 +35,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tbl_users');
     }
 }
