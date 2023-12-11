@@ -10,18 +10,17 @@
                             <a href="#"><i class="feather-grid"></i> <span> Dashboard</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="index.html" class="active">Admin Dashboard</a></li>
-                                <li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
-                                <li><a href="student-dashboard.html">Student Dashboard</a></li>
+                                <li><a href="admin.dashboard" class="active">Admin Dashboard</a></li>
+                                <li><a href="guru.dashboard">Teacher Dashboard</a></li>
+                                <li><a href="siswa.dashboard">Student Dashboard</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
                             <a href="#"><i class="fas fa-users"></i> <span> Account</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="TabelUsers">Account List</a></li>
-                                <li><a href="add-student.html">Account Add</a></li>
-                                <li><a href="edit-student.html">Account Edit</a></li>
+                                <li><a href="{{route('TabelUsers')}}">Account List</a></li>
+                                <li><a href="{{route('AddUser')}}">Account Add</a></li>
                             </ul>
                         </li>
                         <li class="submenu">

@@ -39,8 +39,8 @@
                             <img class="rounded-circle" src="{{ asset('img/profiles/avatar-01.jpg') }}" width="31"
                                 alt="Soeng Souy">
                             <div class="user-text">
-                                <h6>User name</h6>
-                                <p class="text-muted mb-0">Administrator</p>
+                                <h6>{{ str_limit(Auth::user()->name, 10, '...') }}</h6>
+                                <p class="text-muted mb-0">{{ Auth::user()->role }}</p>
                             </div>
                         </span>
                     </a>
@@ -51,13 +51,18 @@
                                     class="avatar-img rounded-circle">
                             </div>
                             <div class="user-text">
-                                <h6>Soeng Souy</h6>
-                                <p class="text-muted mb-0">Administrator</p>
-                            </div>
-                        </div>
+                                <h6>{{ Auth::user()->name }}</h6>
+                                <p class="text-muted mb-0">{{ Auth::user()->role }}
                         <a class="dropdown-item" href="profile.html">My Profile</a>
                         <a class="dropdown-item" href="inbox.html">Inbox</a>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <form id="logout-form" action="{{route('logout')}}" method="post">
+                            @csrf
+                        </form>
+                        <a href="javascript:void(0)" class="nav-link" onclick="$('#logout-form').submit();">
+                            <i class="nav-icon fa fa-sign-out"></i>
+                            <p class="text-dark">Logout</p>
+                        </a>
+                            
                     </div>
                 </li>
 
