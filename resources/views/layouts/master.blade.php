@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/icons/flags/flags.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome/css/all.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+	<!-- <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<!-- Google Font: Source Sans Pro -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
@@ -32,7 +32,7 @@
 		@include('layouts.sidebar')
 
 		<!-- Content Wrapper. Contains page content -->
-		<div class="content-wrapper">
+		<div class="page-wrapper">
 			@yield('content')
 		</div>
 		<!-- /.content-wrapper -->
