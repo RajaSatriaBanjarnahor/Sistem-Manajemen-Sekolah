@@ -32,6 +32,12 @@ Route::get('/TabelUserAdd', function () {
 Route::get('/TabelUserEdit', function () {
     return view('admin.tabelUserEdit');
 });
+Route::get('/TabelAdminAdd', function() {
+    return view('admin.tabelAdminAdd');
+});
+Route::get('/TabelAdminEdit', function() {
+    return view('admin.tabelAdminEdit');
+});
 
 
 Auth::routes(['verify' => false, 'reset' => false]);
@@ -55,6 +61,11 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/TabelStudents/create', [TabelStudentController::class, 'create'])->name('AddStudents');
     Route::post('/TabelStudents/store', [TabelStudentController::class, 'store'])->name('StoreStudents');
     Route::get('/TabelAdmins', [TabelAdminController::class, 'index'])->name('tabelAdmins');
+    Route::get('/TabelAdmins/create', [TabelAdminController::class, 'create'])->name('AddAdmins');
+    Route::post('/TabelAdmins/store', [TabelAdminController::class, 'store'])->name('StoreAdmins');
+    Route::get('/TabelAdmins/edit/{id}', [TabelAdminController::class, 'edit'])->name('EditAdmins');
+    Route::post('/TabelAdmins/update/{id}', [TabelAdminController::class, 'update'])->name('UpdateAdmins');
+    Route::get('/TabelAdmins/delete/{id}', [TabelAdminController::class, 'delete'])->name('DeleteAdmins');
     Route::get('/TabelTeachers', [TabelTeacherController::class, 'index'])->name('tabelTeachers');
 });
 
@@ -66,6 +77,3 @@ Route::group(['middleware' => 'siswa'], function () {
     Route::get('siswa.dashboard', 'SiswaController@dashboard')->name('siswa.dashboard');
 });
 
-Route::group(['middleware' => 'Student'], function () {
-    Route::get('Student.dashboard', 'TabelStudentController@dashboard')->name('Student.dashboard');
-});

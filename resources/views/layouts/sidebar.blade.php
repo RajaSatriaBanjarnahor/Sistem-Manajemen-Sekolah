@@ -27,9 +27,8 @@
                             <a href="#"><i class="fas fa-user-check"></i> <span> Admin/Staf</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="TabelAdmins">Admin/Staf List</a></li>
-                                <li><a href="add-student.html">Admin/Staf Add</a></li>
-                                <li><a href="edit-student.html">Admin/Staf Edit</a></li>
+                                <li><a href="{{route('tabelAdmins')}}">Admin/Staf List</a></li>
+                                <li><a href="{{route('AddAdmins')}}">Admin/Staf Add</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
