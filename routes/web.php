@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,8 @@
 
 use Illuminate\Support\Facades\Route; // Pastikan mengimpor Route
 use Illuminate\Support\Facades\Auth; // Pastikan mengimpor Auth
+=======
+>>>>>>> Stashed changes
 use App\Http\Controllers\TabelUserController;
 use App\Http\Controllers\TabelStudentController;
 use App\Http\Controllers\TabelAdminController;
@@ -32,12 +35,22 @@ Route::get('/TabelUserAdd', function () {
 Route::get('/TabelUserEdit', function () {
     return view('admin.tabelUserEdit');
 });
+<<<<<<< Updated upstream
 Route::get('/TabelAdminAdd', function() {
     return view('admin.tabelAdminAdd');
 });
 Route::get('/TabelAdminEdit', function() {
     return view('admin.tabelAdminEdit');
 });
+=======
+Route::get('/TabelTeacherAdd', function() {
+    return view('admin.addTeacherForm');
+});
+Route::get('/TabelTeacherEdit', function() {
+    return view('admin.editTeacherForm');
+});
+
+>>>>>>> Stashed changes
 
 
 Auth::routes(['verify' => false, 'reset' => false]);
@@ -61,12 +74,22 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/TabelStudents/create', [TabelStudentController::class, 'create'])->name('AddStudents');
     Route::post('/TabelStudents/store', [TabelStudentController::class, 'store'])->name('StoreStudents');
     Route::get('/TabelAdmins', [TabelAdminController::class, 'index'])->name('tabelAdmins');
+<<<<<<< Updated upstream
     Route::get('/TabelAdmins/create', [TabelAdminController::class, 'create'])->name('AddAdmins');
     Route::post('/TabelAdmins/store', [TabelAdminController::class, 'store'])->name('StoreAdmins');
     Route::get('/TabelAdmins/edit/{id}', [TabelAdminController::class, 'edit'])->name('EditAdmins');
     Route::post('/TabelAdmins/update/{id}', [TabelAdminController::class, 'update'])->name('UpdateAdmins');
     Route::get('/TabelAdmins/delete/{id}', [TabelAdminController::class, 'delete'])->name('DeleteAdmins');
     Route::get('/TabelTeachers', [TabelTeacherController::class, 'index'])->name('tabelTeachers');
+=======
+    Route::get('/TabelTeachers', [TabelTeacherController::class, 'index'])->name('TabelTeachers');
+    Route::get('/TabelView', [TabelTeacherController::class, 'index'])->name('TabelView');
+    Route::post('/TabelTeachers/store', [TabelTeacherController::class, 'store'])->name('StoreTeacher');
+    Route::get('/TabelTeachers/create', [TabelTeacherController::class, 'create'])->name('AddTeacher');
+    Route::get('/TabelTeachers/edit/{TeacherID}', [TabelTeacherController::class, 'edit'])->name('EditTeacher');
+    Route::post('/TabelTeachers/update/{TeacherID}', [TabelTeacherController::class, 'update'])->name('UpdateTeacher');
+    Route::get('/TabelTeachers/delete/{TeacherID}', [TabelTeacherController::class, 'delete'])->name('DeleteTeacher');
+>>>>>>> Stashed changes
 });
 
 Route::group(['middleware' => 'guru'], function () {
@@ -76,4 +99,3 @@ Route::group(['middleware' => 'guru'], function () {
 Route::group(['middleware' => 'siswa'], function () {
     Route::get('siswa.dashboard', 'SiswaController@dashboard')->name('siswa.dashboard');
 });
-

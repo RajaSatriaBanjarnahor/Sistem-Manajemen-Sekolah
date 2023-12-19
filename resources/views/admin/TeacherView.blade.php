@@ -41,7 +41,7 @@
                 <h3 class="page-title">Teacher Details</h3>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route('TabelTeachers')}}">Account</a></li>
-                    <li class="breadcrumb-item active">Teacher Details</li>
+                    <li class="breadcrumb-item active">Teacher List</li>
                 </ul>
             </div>
         </div>
@@ -70,7 +70,7 @@
                         <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
                             <thead class="student-thread">
                                 <tr>
-                                    <th>TeacherID</th>
+                                    
                                     <th>FirstName</th>
                                     <th>LastName</th>
 									<th>DateofBirth</th>
@@ -83,7 +83,7 @@
                             <tbody>
                                 @foreach($teacher as $teachers)
                                 <tr>
-                                    <td>{{ $teachers->TeacherID }}</td>
+                                    
                                     <td>{{ $teachers->FirstName }}</td>
                                     <td>{{ $teachers->LastName }}</td>
 									<td>{{ $teachers->DateofBirth }}</td>
