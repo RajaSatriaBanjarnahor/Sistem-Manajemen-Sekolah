@@ -35,7 +35,7 @@
     <div class="col-sm-12">
         <div class="card comman-shadow">
             <div class="card-body">
-                <form action="{{ route('UpdateStudents', ['id' => $Student->StudensID]) }}" method="post">
+                <form action="{{ route('UpdateStudents', ['id' => $Student->StudentID]) }}" method="post">
                     @csrf
                     <div class="row">
                         <div class="col-12">

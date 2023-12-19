@@ -57,15 +57,11 @@ class TabelStudentController extends Controller
             'Gender' => 'required',
             'PhoneNumber' => 'required',
             'ClassID' => 'required',
-        ])->validate();
+        ])->validated();
 
-        $Student->FirstName = $validatedData['FirstName'];
-        $Student->LastName = $validatedData['LastName'];
-        $Student->DateofBirth = $validatedData['DateofBirth'];
-        $Student->Gender = $validatedData['Gender'];
-        $Student->PhoneNumber = $validatedData['PhoneNumber'];
-        $Student->ClassID = $validatedData['ClassID'];
-        $Student->save();
+
+        $Student->update($validatedData);
+
 
         // Redirect to a success page or wherever you want
         return redirect()->route('tabelStudents')->with('success', 'Students updated successfully!');
