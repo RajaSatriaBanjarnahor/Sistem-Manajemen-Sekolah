@@ -21,15 +21,15 @@
                             <ul>
                                 <li><a href="{{route('TabelUsers')}}">Account List</a></li>
                                 <li><a href="{{route('AddUser')}}">Account Add</a></li>
+                                <li><a href="{{route('AddTeacher')}}">Account Add</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
                             <a href="#"><i class="fas fa-user-check"></i> <span> Admin/Staf</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="TabelAdmins">Admin/Staf List</a></li>
-                                <li><a href="add-student.html">Admin/Staf Add</a></li>
-                                <li><a href="edit-student.html">Admin/Staf Edit</a></li>
+                                <li><a href="{{route('tabelAdmins')}}">Admin/Staf List</a></li>
+                                <li><a href="{{route('AddAdmins')}}">Admin/Staf Add</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
@@ -43,13 +43,12 @@
                             </ul>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span
+                            <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span>Teachers</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="TabelTeachers">Teacher List</a></li>
-                                <li><a href="teacher-details.html">Teacher View</a></li>
-                                <li><a href="add-teacher.html">Teacher Add</a></li>
-                                <li><a href="edit-teacher.html">Teacher Edit</a></li>
+                                <li><a href="{{route('TabelTeachers')}}">Teacher List</a></li>
+                                <li><a href="{{route('TabelView')}}">Teacher View</a></li>
+                                <li><a href="{{route('AddTeacher')}}">Teacher Add</a></li>
                             </ul>
                         </li>
                         <li class="submenu">

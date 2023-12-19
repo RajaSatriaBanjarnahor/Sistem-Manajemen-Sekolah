@@ -27,7 +27,16 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Tabel Students</h5>
+                        <div class="page-header">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 class="page-title">Tabel Student</h3>
+                                </div>
+                                <div class="col-auto text-end float-end ms-auto download-grp">
+                                    <a href="{{ route('AddStudents') }}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="table-responsive">
                             <table class="table table-striped">
                             <thead>
@@ -39,6 +48,8 @@
                                     <th>Gender</th>
                                     <th>PhoneNumber</th>
                                     <th>ClassID</th>
+                                    <th>Action</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,6 +62,16 @@
                                         <td>{{ $student->Gender }}</td>
                                         <td>{{ $student->PhoneNumber }}</td>
                                         <td>{{ $student->ClassID }}</td>
+                                        <td class="text-end">
+                                            <div class="actions">
+                                                <a href="{{route('EditStudents', ['id' => $student->StudentID])}}" class="btn btn-sm bg-danger-light me-2">
+                                                    <i class="feather-edit"></i>
+                                                </a>
+                                                <a onclick="confirmDelete(this)" data-url="{{ route('DeleteStudents', ['id' => $student->StudentID]) }}" class="btn btn-sm bg-success-light">
+                                                    <i class="feather-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
