@@ -33,7 +33,9 @@
 
 		<!-- Content Wrapper. Contains page content -->
 		<div class="page-wrapper">
-			@yield('content')
+			<div class="content container-fluid">
+				@yield('content')
+			</div>
 		</div>
 		<!-- /.content-wrapper -->
 
@@ -50,7 +52,7 @@
     <script src="{{ asset('plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
     <script src="{{ asset('plugins/apexchart/apexcharts.min.js') }}"></script>
     <script src="{{ asset('plugins/apexchart/chart-data.js') }}"></script>
-    <script src="{{ asset('js/adminlte.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/adminlte.min.js') }}"></script> -->
     <script src="{{ asset('js/script.js') }}"></script>
 	
 	@yield('addJavascript')

@@ -11,12 +11,12 @@ class TabelTeacherController extends Controller
     public function index()
     {
         $teacher = Teacher::all();
-        return view('admin.TeacherView', compact('teacher'));
+        return view('admin.tabelTeacher', compact('teacher'));
     }
 
     public function create()
     {
-        return view('admin.addTeacherForm');
+        return view('admin.tabelTeacherAdd');
     }
 
 
@@ -42,7 +42,7 @@ class TabelTeacherController extends Controller
     {
         $teacher = Teacher::find($TeacherID);
 
-        return view('admin.editTeacherForm', compact('teacher'));
+        return view('admin.tabelTeacherEdit', compact('teacher'));
     }
 
     public function update(Request $request, $TeacherID)
@@ -71,7 +71,7 @@ class TabelTeacherController extends Controller
 
     public function showTeacherView()
     {
-        return view('admin.TeacherView');
+        return view('admin.tabelTeacher');
     }
 
     public function delete($id)

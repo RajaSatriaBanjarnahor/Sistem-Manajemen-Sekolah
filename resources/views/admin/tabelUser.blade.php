@@ -1,8 +1,7 @@
-@extends('admin.dashboard')
+@extends('layouts.master')
 
 @section('addCss')
-    <link rel="stylesheet" href="{{ asset('plugins/datatables/datatables.min.css') }}">
-    
+    <link rel="stylesheet" href="{{ asset('plugins/datatables/datatables.min.css') }}"> 
 @endsection
 
 @section('addJavascript')
@@ -31,9 +30,6 @@
 @endsection
 
 @section('content')
-<div class="content container-fluid">
-
-
 <!-- Content Header (Page header) -->
 <div class="page-header">
     <div class="row">
@@ -63,7 +59,7 @@
                             <h3 class="page-title">Tabel Users</h3>
                         </div>
                         <div class="col-auto text-end float-end ms-auto download-grp">
-                            <a href="TabelUserAdd" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                            <a href="{{route('AddUser')}}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                         </div>
                     </div>
                 </div>
@@ -110,17 +106,4 @@
     </div>
 </div>
 
-</div>
 @endsection
-
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-@if(session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-@endif

@@ -1,4 +1,4 @@
-@extends('admin.dashboard')
+@extends('layouts.master')
 
 @section('addCss')
     <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
@@ -49,42 +49,45 @@
                                 <input class="form-control" type="text" name="FirstName" required
                                     placeholder="Enter Full Name">
                             </div>
-                        </div>
+                        </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group local-forms">
                                 <label>LastName <span class="login-danger">*</span></label>
                                 <input class="form-control" type="text" name="LastName" required
                                     placeholder=" Enter last Name">
                             </div>
-                      </div>
+                        </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group local-forms">
                                 <label>DateofBirth <span class="login-danger">*</span></label>
                                 <input class="form-control" type="date" name="DateofBirth" required
                                     placeholder=" Enter DateofBirth">
                             </div>
-                      </div>
+                        </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group local-forms">
                                 <label>Gender <span class="login-danger">*</span></label>
-                                <input class="form-control" type="text" name="Gender" required
-                                    placeholder=" Enter Gender">
+                                <select class="form-control select" name="Gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
                             </div>
-                      </div>
-                    <div class="col-12 col-sm-6">
-                        <div class="form-group local-forms">
-                            <label>PhoneNumber <span class="login-danger">*</span></label>
-                            <input class="form-control" type="text" name="PhoneNumber" required
-                                placeholder=" Enter PhoneNumber">
                         </div>
-                  </div>
-                <div class="col-12 col-sm-6">
-                    <div class="form-group local-forms">
-                        <label>ClassID <span class="login-danger">*</span></label>
-                        <input class="form-control" type="int" name="ClassID" required
-                            placeholder=" Enter ClassID">
-                    </div>
-                  </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group local-forms">
+                                <label>PhoneNumber <span class="login-danger">*</span></label>
+                                <input class="form-control" type="text" name="PhoneNumber" required
+                                    placeholder=" Enter PhoneNumber">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="form-group local-forms">
+                                <label>ClassID <span class="login-danger">*</span></label>
+                                <input class="form-control" type="int" name="ClassID" required
+                                    placeholder=" Enter ClassID">
+                            </div>
+                        </div>
                         <div class="col-12">
                             <div class="student-submit">
                                 <button type="submit" class="btn btn-primary">Submit</button>

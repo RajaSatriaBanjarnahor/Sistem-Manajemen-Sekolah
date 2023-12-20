@@ -1,4 +1,4 @@
-@extends('admin.dashboard')
+@extends('layouts.master')
 
 @section('addCss')
     <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
@@ -64,7 +64,7 @@
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms calendar-icon">
+                                            <div class="form-group local-forms">
                                                 <label>Date Of Birth <span class="login-danger">*</span></label>
                                                 <input class="form-control datetimepicker" type="date" name="DateofBirth"
                                                     placeholder="DD-MM-YYYY">
@@ -77,9 +77,9 @@
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms calendar-icon">
+                                            <div class="form-group local-forms">
                                                 <label>Joining Date <span class="login-danger">*</span></label>
-                                                <input class="form-control datetimepicker" type="text"
+                                                <input class="form-control datetimepicker" type="date"
                                                     placeholder="DD-MM-YYYY">
                                             </div>
                                         </div>

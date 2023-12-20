@@ -1,8 +1,8 @@
-@extends('admin.dashboard')
+@extends('layouts.master')
 
 @section('addCss')
+    <link rel="stylesheet" href="{{ asset('plugins/datatables/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
-
 @endsection
 
 @section('addJavascript')
@@ -31,8 +31,6 @@
 @endsection
 
 @section('content')
-<div class="content container-fluid">
-
     <!-- Content Header (Page header) -->
  <div class="page-header">
     <div class="row">
@@ -61,7 +59,7 @@
                                 <h3 class="page-title">Tabel Teacher</h3>
                             </div>
                             <div class="col-auto text-end float-end ms-auto download-grp">
-                                <a href="TabelTeachers/create" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                                <a href="{{route('AddTeacher')}}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -101,26 +99,13 @@
                                         </div>
                                     </td>
                                 </tr>
-                                @endforeach
-                            </tbody>
-                        </table> 
-                    </div>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</div>
-@endsection <br>
+@endsection
 
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
-@if(session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-@endif

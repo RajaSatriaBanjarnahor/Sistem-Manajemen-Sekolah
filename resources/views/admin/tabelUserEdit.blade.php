@@ -1,4 +1,4 @@
-@extends('admin.dashboard')
+@extends('layouts.master')
 
 @section('addCss')
     <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">

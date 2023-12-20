@@ -1,4 +1,4 @@
-@extends('admin.dashboard')
+@extends('layouts.master')
 
 @section('addCss')
     <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
@@ -64,7 +64,13 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group local-forms">
                                 <label>Gender <span class="login-danger">*</span></label>
-                                <input class="form-control" type="text" name="Gender" value="{{ $Student->Gender }}" required autocomplete="name" placeholder="Enter Full Name">
+                                <select id="role" name="Gender" class="form-control select">
+                                    <optgroup label="Select Role">
+                                        <option {{ ($Student['Gender'] == 'Male') ? "selected" : "" }} value="Male">Male</option>
+                                        <option {{ ($Student['Gender'] == 'Female') ? "selected" : "" }} value="Female">Female</option>
+                                        <option {{ ($Student['Gender'] == 'Others') ? "selected" : "" }} value="Others">Others</option>
+                                    </optgroup>
+                                </select>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">

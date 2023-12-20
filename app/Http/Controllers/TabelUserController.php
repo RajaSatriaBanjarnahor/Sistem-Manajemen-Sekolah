@@ -60,7 +60,7 @@ class TabelUserController extends Controller
             'StudentID' => 'nullable|integer',
             'TeacherID' => 'nullable|integer',
             'AdminID' => 'nullable|integer',
-        ])->validate();
+        ])->validated();
 
         // If password is provided, update it
         if ($request->filled('password') && $request->input('password') !== $user->password) {

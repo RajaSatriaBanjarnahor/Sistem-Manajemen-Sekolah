@@ -1,4 +1,4 @@
-@extends('admin.dashboard')
+@extends('layouts.master')
 
 @section('addCss')
     <link rel="stylesheet" href="{{ asset('plugins/datatables/datatables.min.css') }}">
@@ -63,7 +63,7 @@
                             <h3 class="page-title">Tabel Subject</h3>
                         </div>
                         <div class="col-auto text-end float-end ms-auto download-grp">
-                            <a href="TabelSubject/create" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                            <a href="{{route('AddSubjects')}}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                         </div>
                     </div>
                 </div>
